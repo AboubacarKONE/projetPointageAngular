@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Liste des apprenants</h1>
+ <div>
+ <table class="table">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Email</th>
+        <th>genre</th>
+        <th>Telephone</th>
+        <th>statut</th>
+        <th>action</th>
+        <th>action</th>
+
+      </tr>
+    </thead>
+    <tbody *ngIf="users">
+      <tr *ngFor="let u of users">
+        <td>{{u.nom}}</td>
+        <td>{{u.prenom}}</td>
+        <td>{{u.email}}</td>
+        <td>{{u.genre}}</td>
+        <td>{{u.statut}}</td>
+        <td><button type="submit" name="modifier">Modifier</button></td>
+        <td><button type="submit" name="supprimer" (click)="supprimer(u.id)">Supprimer</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="submit" class="ajouter2"(click)=" addApprenant()">Ajouter</button>
+</div>
+<h1 class="h1">Liste des Formateurs</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="formateurs">
+    <tr *ngFor="let f of formateurs">
+      <td>{{f.nom}}</td>
+        <td>{{f.prenom}}</td>
+        <td>{{f.email}}</td>
+        <td>{{f.genre}}</td>
+        <td>{{f.statut}}</td>
+        <td><button type="submit" name="modifier">Modifier</button></td>
+        <td><button type="submit" name="supprimer" (click)="supprimerformateur(f.id)">Supprimer</button></td>
+    </tr>
+
+  </tbody>
+</table>
+  <button type="submit" class="ajouter2" (click)="onClick()">Ajouter</button>
+</body>
+</html>

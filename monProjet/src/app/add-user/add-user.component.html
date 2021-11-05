@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container mt-3">
+    <h2>Formulaire d'Ajout</h2>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="mb-3 mt-3">
+        <label for="text">NOM:</label>
+        <input type="text" class="form-control"   name="nom" ngModel>
+      </div>
+      <div class="mb-3">
+        <label for="pwd">Prenom:</label>
+        <input type="text" class="form-control"   name="prenom" ngModel>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control"  name="email" ngModel>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="">password:</label>
+        <input type="password" class="form-control"  name="password" ngModel>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="e">TELEPHONE:</label>
+        <input type="number" class="form-control"   name="Telephone" ngModel>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="">GENRE:</label>
+        <input type="text" class="form-control" name="GENRE" ngModel>
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="email">Statut:</label>
+        <input type="text" class="form-control"  name="statut" ngModel>
+      </div>
+      <div class="form-check mb-3">
+        <label class="form-check-label">
+          <select class="form-select form-select-lg" name="type" ngModel>
+            <option>formateur</option>
+            <option>Apprenant</option>
+
+          </select><br><br>
+          <input class="form-check-input" type="checkbox" name="remember"> Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
